@@ -1,3 +1,7 @@
+###
+### Deprecated. Use now "Enable VCS deployments in the versioned update.cf"
+###
+
  bundle agent vcs_update
     {
     commands:
