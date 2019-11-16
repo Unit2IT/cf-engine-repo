@@ -13,7 +13,7 @@ body common control
                           inventory_control,
                           @(inventory.bundles),
                           def,
-                          write_file_test,
+                          write_file_test,                  
                           @(cfengine_enterprise_hub_ha.classification_bundles),
 
                           # Design Center
@@ -26,6 +26,7 @@ body common control
                          # Agent bundle
                           cfe_internal_management,   # See cfe_internal/CFE_cfengine.cf
                           main,
+                          vcs_update,
                           @(cfengine_enterprise_hub_ha.management_bundles),
                           @(def.bundlesequence_end),
 
@@ -48,6 +49,7 @@ body common control
 
                  # Control body for all CFEngine robot agents
                   @(cfengine_controls.inputs),
+                  "src/vcs_update.cf",
 
                  # COPBL/Custom libraries.  Eventually this should use wildcards.
                   @(cfengine_stdlib.inputs),
