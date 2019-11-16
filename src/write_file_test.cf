@@ -1,0 +1,6 @@
+bundle agent write_file_test{
+ files:
+  any::
+   "/tmp/hello-world"
+     create => "true";
+}

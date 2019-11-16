@@ -13,6 +13,7 @@ body common control
                           inventory_control,
                           @(inventory.bundles),
                           def,
+                          write_file_test,
                           @(cfengine_enterprise_hub_ha.classification_bundles),
 
                           # Design Center
@@ -33,6 +34,7 @@ body common control
       inputs => {
                  # File definition for global variables and classes
                   @(cfengine_controls.def_inputs),
+                  "src/write_file_test.cf",
              
                 # Inventory policy
                   @(inventory.inputs),
